@@ -2,19 +2,21 @@
 ##### Game Of Life Kata - done in multiple languages.
 ***
 This is based on the [Conway's Game Of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) but with a finite grid.
+
 The base requirements for this Kata were taken from [Coding Dojo](http://codingdojo.org/kata/GameOfLife/)
 
 The basic concept here was to do the same Kata, but in multiple different languages. I kept the same set of unit tests and (mostly) the same API accross all the implementations. 
 This means that the implementation may not be optimal for each language.
 E.g. Some languages do not support Arrays at all, or they support only single-dimention arrays - So I used a Jagged Array (Array of Arrays) to represent the finite M x N grid.
 
-This however allowed me to compare how the same implementation looks at each language - and basically "compare apples to apples".
+This however allows you to compare how the same implementation looks at each language - and basically "compare apples to apples".
 
 ### Kata description
 You get as input an M * N initial grid where some cells are marked as “LIVE” and the other are marked as “DEAD”.
 This is considered as the "Zero Generation"
 
 ##### Input sample
+
 GO
 ```golang
 zeroGen := Init(4, 8, []Coord{{2, 4}, {3, 4}, {3, 5}} )
@@ -45,6 +47,7 @@ To calculate the next generation of the grid – based on the following rules:
 6.	Any dead cell with exactly three (3) live neighbors becomes a live cell.
 
 So assuming the input above, the output should be:
+
 Go
 ```golang
 firstGen := nextGen(zeroGen)
